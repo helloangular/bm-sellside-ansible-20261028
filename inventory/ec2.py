@@ -3,8 +3,14 @@
 # container per catalog environment. Replace with BlueMatrix's real ops/ansible.git inventory.
 import json, sys
 groups = {
+ "sellside_prd_dr_eu": "bm-sellside-ss-prd-dr-tm-target",
+ "sellside_prd_dr_na": "bm-sellside-ss-prd-dr-fl-target",
  "sellside_prd_eu": "bm-sellside-ss-prd-ams-target",
  "sellside_prd_na": "bm-sellside-ss-prd-nj-target",
+ "sellside_prd_rollout_dr_eu": "bm-sellside-ss-prd-rollout-dr-tm-target",
+ "sellside_prd_rollout_dr_na": "bm-sellside-ss-prd-rollout-dr-fl-target",
+ "sellside_prd_rollout_eu": "bm-sellside-ss-prd-rollout-ams-target",
+ "sellside_prd_rollout_na": "bm-sellside-ss-prd-rollout-nj-target",
  "sellside_preprd_au": "bm-sellside-ss-preprd-apse2-target",
  "sellside_preprd_eu": "bm-sellside-ss-preprd-ams-target",
  "sellside_preprd_na": "bm-sellside-ss-preprd-ny-target",
@@ -54,10 +60,40 @@ inv['_meta'] = {'hostvars': {
   "ansible_python_interpreter": "/usr/local/ansible/bin/python3",
   "target_container": "bm-sellside-ss-prd-ams"
  },
+ "bm-sellside-ss-prd-dr-fl-target": {
+  "ansible_connection": "local",
+  "ansible_python_interpreter": "/usr/local/ansible/bin/python3",
+  "target_container": "bm-sellside-ss-prd-dr-fl"
+ },
+ "bm-sellside-ss-prd-dr-tm-target": {
+  "ansible_connection": "local",
+  "ansible_python_interpreter": "/usr/local/ansible/bin/python3",
+  "target_container": "bm-sellside-ss-prd-dr-tm"
+ },
  "bm-sellside-ss-prd-nj-target": {
   "ansible_connection": "local",
   "ansible_python_interpreter": "/usr/local/ansible/bin/python3",
   "target_container": "bm-sellside-ss-prd-nj"
+ },
+ "bm-sellside-ss-prd-rollout-ams-target": {
+  "ansible_connection": "local",
+  "ansible_python_interpreter": "/usr/local/ansible/bin/python3",
+  "target_container": "bm-sellside-ss-prd-rollout-ams"
+ },
+ "bm-sellside-ss-prd-rollout-dr-fl-target": {
+  "ansible_connection": "local",
+  "ansible_python_interpreter": "/usr/local/ansible/bin/python3",
+  "target_container": "bm-sellside-ss-prd-rollout-dr-fl"
+ },
+ "bm-sellside-ss-prd-rollout-dr-tm-target": {
+  "ansible_connection": "local",
+  "ansible_python_interpreter": "/usr/local/ansible/bin/python3",
+  "target_container": "bm-sellside-ss-prd-rollout-dr-tm"
+ },
+ "bm-sellside-ss-prd-rollout-nj-target": {
+  "ansible_connection": "local",
+  "ansible_python_interpreter": "/usr/local/ansible/bin/python3",
+  "target_container": "bm-sellside-ss-prd-rollout-nj"
  },
  "bm-sellside-ss-preprd-ams-target": {
   "ansible_connection": "local",
