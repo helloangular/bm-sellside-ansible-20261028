@@ -1,0 +1,7 @@
+---
+# STAND-IN for BlueMatrix's slack_announce_release.yml: logs only, posts nothing.
+- hosts: localhost
+  gather_facts: false
+  tasks:
+    - ansible.builtin.debug:
+        msg: "{{ app_inventory_group_name }} {{ app_version }} {{ release_status }}"
